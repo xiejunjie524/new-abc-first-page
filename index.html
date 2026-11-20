@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="新手第一课：做出并下载你的第一个网页。">
+  <title>新手第一课 · New ABC</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">N</span> New ABC</a>
+    <span>新手第一课</span>
+  </header>
+  <main>
+    <h1>做你的第一个网页</h1>
+    <div class="workspace">
+      <form class="editor" id="editor">
+        <h2>编辑内容</h2>
+        <label for="page-title">网页标题</label>
+        <input id="page-title" name="title" maxlength="40" value="周末，去看湖">
+        <label for="page-description">一段简介</label>
+        <textarea id="page-description" name="description" rows="3" maxlength="180">离开城市两天，沿着湖边走走，给自己留一点安静的时间。</textarea>
+        <fieldset>
+          <legend>主题颜色</legend>
+          <div class="swatches">
+            <label class="swatch" title="湖绿色"><input type="radio" name="theme" value="lake" checked><span style="--swatch:#176b58"><span class="sr-only">湖绿色</span></span></label>
+            <label class="swatch" title="砖红色"><input type="radio" name="theme" value="clay"><span style="--swatch:#a04336"><span class="sr-only">砖红色</span></span></label>
+            <label class="swatch" title="靛蓝色"><input type="radio" name="theme" value="ink"><span style="--swatch:#394f98"><span class="sr-only">靛蓝色</span></span></label>
+          </div>
+        </fieldset>
+        <div class="actions">
+          <button type="button" id="download" class="primary"><i data-lucide="download" aria-hidden="true"></i>下载 HTML</button>
+          <button type="reset" class="icon" aria-label="恢复示例" title="恢复示例"><i data-lucide="rotate-ccw" aria-hidden="true"></i><span class="sr-only">恢复示例</span></button>
+        </div>
+        <p class="status" id="status" role="status"></p>
+      </form>
+      <section class="preview" aria-labelledby="preview-title">
+        <div class="preview-bar">
+          <h2 id="preview-title">网页预览</h2>
+          <span>index.html</span>
+        </div>
+        <iframe id="preview" title="你的网页预览" sandbox></iframe>
+      </section>
+    </div>
+    <noscript><p>开启 JavaScript 后可以编辑和下载网页。</p></noscript>
+  </main>
+  <script src="./lucide.min.js"></script>
+</body>
+</html>
